@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script>
+	// load 이벤트
+	window.onload = function(){
+	
+		// querySelectorAll('h1')는 모든 h1태그를 구해와서 배열로 리턴 해준다.
+		var headers = document.querySelectorAll('h1');
+		
+		for(var i=0; i<headers.length; i++){
+			var header = headers[i];
+			
+			header.style.color = 'green';		// 글자색
+			header.style.background = 'red';	// 배경색
+			
+			header.innerHTML = "자바스크립트";
+		}		
+	}
+</script>
+</head>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+	<h1>Header</h1>
+</body>
+</html>
