@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mouseover, mouseout 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$('img').mouseover(function(){	// mouserover 이벤트
+			$(this).attr("src","Jellyfish.jpg")
+				   .attr("title", "해파리");
+			$("body").css("background", "yellow");
+		});
+// 		}).mouseout(function(){		// .으로 연결해서도 가능
+		$('img').mouseout(function(){
+			$(this).attr("src", "flower.jpg")
+				   .attr("title","꽃");
+			$("body").css("background","skyblue");
+		});
+		
+	});
+
+</script>
+</head>
+<body>
+	<img src="flower.jpg" title="꽃">
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		// submit 이벤트
+		// jQuery로 submit이벤트를 처리할때 form태그를 구해와서
+		// submit 이벤트를 처리해야 된다.
+		$("#myform").submit(function(){		// submit 이벤트
+			if($("#name").val() == ""){
+				alert("이름을 입력 하세요.");
+				$("#name").focus();
+				return false;
+			}
+			if($("#email").val() == ""){
+				alert("이메일 주소를 입력 하세요.");
+				$("#email").focus();
+				return false;
+			}
+			
+		});
+		
+	
+	});
+</script>
+</head>
+<body>
+<form id="myform" method="post" action="send.jsp">
+	이름 : <input type="text" size="20" name="name" id="name"><br>
+	Email : <input type="text" size="20" name="email" id="email"><br>
+	
+			<input type="submit" value="전송" id="sub">
+
+</form>
+</body>
+</html>
