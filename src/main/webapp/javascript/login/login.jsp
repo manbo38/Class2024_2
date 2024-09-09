@@ -4,6 +4,7 @@
 <%
 	String id = request.getParameter("id");
 	String passwd = request.getParameter("passwd");
+	
 %>
 
 ID : <%=id %> <br>
